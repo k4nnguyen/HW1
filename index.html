@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <style>
+      button {
+        border: none;
+        background: none;
+      }
+      body {
+        font-family: "Roboto", serif;
+      }
+
+      .request-box {
+        margin-bottom: 10px;
+        width: 100%;
+        border-radius: 20px;
+      }
+      .inner-title {
+        opacity: 50%;
+        margin: 10px auto;
+      }
+      .request-list {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .information-box {
+        display: flex;
+        border-radius: 10px;
+        align-items: center;
+        flex-direction: column;
+        width: 15%;
+        margin-left: 20px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        overflow: hidden;
+      }
+      .inner-img {
+        width: 100%;
+      }
+      .inner-name {
+        font-weight: bold;
+        margin: 5px;
+      }
+      .information-box button {
+        padding: 10px;
+        width: 90%;
+        font-weight: bold;
+        border-radius: 7px;
+        cursor: pointer;
+        margin-bottom: 8px;
+      }
+      .confirm-btn {
+        color: #0c6ad3;
+        background-color: #ebf5ff;
+        transition: all 0.3s ease-in-out 0s;
+      }
+      .confirm-btn:hover {
+        color: #0c6ad3;
+        background-color: #93c5f7;
+      }
+      .clicked {
+        color: #0c6ad3;
+        background-color: #52a6f9;
+        transition: all 0.3s ease-in-out 0s;
+      }
+      .delete-btn {
+        color: black;
+        background-color: #e3e5e9;
+        transition: all 0.3s ease-in-out 0s;
+      }
+      .delete-btn:hover {
+        background-color: #d7d9dd;
+      }
+      .inner-more {
+        color: #0c6ad3;
+        background-color: #fff;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out 0s;
+      }
+      .inner-more:hover {
+        background-color: #e1e0e0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="request-box">
+      <h4 class="inner-title">Friend Request</h4>
+      <div class="request-list">
+        <div class="information-box">
+          <img src="av.jpg" class="inner-img" />
+          <p class="inner-name">ABC CBA</p>
+          <h5 class="inner-title">19 multual friend</h5>
+          <button class="confirm-btn">Confirm</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+        <div class="information-box">
+          <img src="lta.jpg" class="inner-img" />
+          <p class="inner-name">LTA ATL</p>
+          <h5 class="inner-title">36 multual friend</h5>
+          <button class="confirm-btn">Confirm</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+        <div class="information-box">
+          <img src="av.jpg" class="inner-img" />
+          <p class="inner-name">An Nguyễn</p>
+          <h5 class="inner-title" style="color: transparent">0</h5>
+          <button class="confirm-btn">Confirm</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+        <div class="information-box">
+          <img src="av.jpg" class="inner-img" />
+          <p class="inner-name">Mark Zucchini</p>
+          <h5 class="inner-title">19 multual friend</h5>
+          <button class="confirm-btn">Confirm</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+        <div class="information-box">
+          <img src="av.jpg" class="inner-img" />
+          <p class="inner-name">Nguyen A</p>
+          <h5 class="inner-title">19 multual friend</h5>
+          <button class="confirm-btn">Confirm</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+        <div class="information-box">
+          <img src="av.jpg" class="inner-img" />
+          <p class="inner-name">ABACCSA</p>
+          <h5 class="inner-title">19 multual friend</h5>
+          <button class="confirm-btn">Confirm</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+      <button class="inner-more">See all</button>
+    </div>
+    <script>
+      const acp = document.querySelectorAll("button.confirm-btn");
+      acp.forEach((items) => {
+        const check = items.addEventListener("click", function () {
+          const clicked_user = items.closest("div.information-box");
+          /* level 1+2
+          const text = clicked_user.querySelector("button.confirm-btn");
+          text.innerText = "Accepted";
+          text.classList.remove("confirm-btn");
+          text.classList.add("clicked"); */
+          //
+          //level 3
+          clicked_user.remove();
+        });
+      });
+    </script>
+  </body>
+</html>
