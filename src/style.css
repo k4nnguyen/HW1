@@ -1,96 +1,138 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+  border: none;
+  background: none;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+body {
+  font-family: "Roboto", serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.request-box {
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 20px;
+}
+.inner-title {
+  opacity: 50%;
+  margin: 10px auto;
+}
+.request-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.information-box {
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  flex-direction: column;
+  width: 15%;
+  margin-left: 20px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out 0s;
+}
+.inner-img {
+  width: 100%;
+}
+.inner-name {
+  font-weight: bold;
+  margin: 5px;
+}
+button {
+  padding: 10px;
+  width: 90%;
+  font-weight: bold;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.inf {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.confirm-btn {
+  color: #0c6ad3;
+  background-color: #ebf5ff;
+  transition: all 0.3s ease-in-out 0s;
+}
+.confirm-btn:hover {
+  color: #0c6ad3;
+  background-color: #93c5f7;
+}
+.clicked {
+  color: #0c6ad3;
+  background-color: #52a6f9;
+  transition: all 0.3s ease-in-out 0s;
+}
+.delete-btn {
+  color: black;
+  background-color: #e3e5e9;
+  transition: all 0.3s ease-in-out 0s;
+}
+.delete-btn:hover {
+  background-color: #d7d9dd;
+}
+.inner-more {
+  color: #0c6ad3;
+  background-color: #fff;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out 0s;
+}
+.inner-more:hover {
+  background-color: #e1e0e0;
+}
+
+.item {
+  padding: 0 30px;
+}
+.question {
+  max-width: 50vw;
+  font-size: 15px;
+  padding: 10px;
+  border-bottom: 2px solid #919eab3d;
+  cursor: pointer;
+}
+.answer {
+  max-width: 50vw;
+  padding: 0px 10px;
+  overflow: hidden;
+  transition: 0.5s ease-in-out, padding 0.5s ease-out;
+  max-height: 0px;
+}
+.item.haha {
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  max-width: 52vw;
+  padding: 10px 30px;
+  margin-bottom: 10px;
+}
+.item.haha .question {
+  border-bottom: none;
+}
+.item.haha .answer {
+  padding: 10px 10px;
+  margin-top: 10px;
+  max-height: 70px;
+}
+
+.list-item {
+  margin-top: 20px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+.list-item.active {
+  opacity: 100;
 }
